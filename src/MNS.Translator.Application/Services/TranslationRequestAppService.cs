@@ -22,11 +22,17 @@ namespace MNS.Translator.Application.Services
 
             var translationRequest = _apiRequestAppService.GetTranslation(text);
             if (translationRequest == null)
+            {
                 responseResult.Message = "Service not available, please try again.";
+                return responseResult;
+            }                
 
             translationRequest = _translationRequestService.Save(translationRequest);
             if (translationRequest == null || !translationRequest.ValidationResult.IsValid)
+            {
                 responseResult.Message = "Occurred an error to process the request.";
+                return responseResult;
+            }                
 
             if (translationRequest.Success)
             {
