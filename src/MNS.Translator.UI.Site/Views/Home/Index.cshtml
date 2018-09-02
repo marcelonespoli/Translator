@@ -1,0 +1,79 @@
+﻿@model MNS.Translator.Application.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "fromTranslator", @class = "form-inline" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group mb-2 col-12 col-md-9 clear-paddingLR">
+                @Html.TextBoxFor(c => c.Text, new { @class = "form-control", placeholder = "Type a text to be translate" })
+            </div>    
+            <button type="button" id="btnSubmit" class="btn btn-secondary ladda-button mb-2 col-12 col-md-3" data-style="zoom-in" data-size="l">
+                <span class="ladda-label">Translate</span>
+            </button>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 response-content d-none">
+        <div id="translateContent" class="alert alert-success" role="alert"></div>
+    </div>
+</div>    
+
+
+@section scripts {
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            Ladda.bind('button[type=button]');
+            toastr.options = {
+                positionClass: 'toast-top-left'
+            };
+
+            $("#btnSubmit").click(function () {
+                if ($("#Text").val() === "") {
+                    Ladda.stopAll();
+                    toastr.error("Please supply a text to be translated");
+                    return false;
+                }
+                var data = $("#fromTranslator").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Translate", "Home")',
+                    data: data,
+                    error: function (xhr, status, error) {
+                        hideResponseContent();
+                        Ladda.stopAll();
+                        toastr.error(xhr.responseText);
+                    },
+                    success: function (response) {
+                        Ladda.stopAll();
+                        if (response.Success === true) {
+                            $(".response-content").removeClass("d-none");
+                            $("#translateContent").text(response.Translation);
+                        } else {
+                            hideResponseContent();
+                            $("#translateContent").text("");
+                            toastr.error(response.Message);
+                        }
+                    }
+                });
+            });
+
+        });
+
+        function hideResponseContent() {
+            if (!$(".response-content").hasClass("d-none")) {
+                $(".response-content").addClass("d-none");
+            }
+        }
+
+    </script>     
+    
+}

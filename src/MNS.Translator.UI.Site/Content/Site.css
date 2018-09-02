@@ -1,0 +1,64 @@
+﻿body {
+    padding-bottom: 20px;
+}
+
+input {
+    width: 100% !important;
+}
+
+
+.head-content {
+    background-color: rgb(77, 157, 224);
+    width: 100%;
+    height: 150px;
+}
+    .head-content .title {
+        font-weight: bold;
+        font-size: 1.35rem;        
+        padding: 50px 0 0 25px;
+    }
+
+.body-content {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.response-content {
+    font-size: 1.2rem;
+    text-align:left;
+    margin-top: 25px;
+}
+
+.clear-paddingLR {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .clear-paddingLR {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    .head-content .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+

@@ -1,0 +1,13 @@
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\MNS.Translator.Domain.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\MNS.Translator.Domain.pdb
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\FluentValidation.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\System.ValueTuple.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\FluentValidation.xml
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\bin\Debug\System.ValueTuple.xml
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\obj\Debug\MNS.Translator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\obj\Debug\MNS.Translator.Domain.csproj.CopyComplete
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\obj\Debug\MNS.Translator.Domain.dll
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\obj\Debug\MNS.Translator.Domain.pdb
+C:\Users\Marcelo\source\repos\Translator\src\MNS.Translator.Domain\obj\Debug\MNS.Translator.Domain.csprojAssemblyReference.cache
